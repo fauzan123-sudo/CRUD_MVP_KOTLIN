@@ -15,7 +15,7 @@ class Presenter (val crudView: CrudView) {
             .enqueue(object : retrofit2.Callback<ResultStaff>{
                 override fun onFailure(call: Call<ResultStaff>, t: Throwable) {
                     crudView.onFailedGet(t.localizedMessage)
-                    Log.d("Error", "Error Data")
+
                 }
 
                 override fun onResponse(call: Call<ResultStaff>, response: Response<ResultStaff>) {

@@ -29,7 +29,7 @@ object NetworkConfig {
 
     fun getRetrofit(): Retrofit {
         return Retrofit.Builder()
-            .baseUrl("http://192.168.10.232/server_udacoding/index.php/ServerApi/")
+            .baseUrl("http://192.168.100.125/CodeIgniter/ServerApi/")
             .client(getInterceptor())
             .addConverterFactory(GsonConverterFactory.create())
             .build()
@@ -42,9 +42,9 @@ interface StaffService{
     //Fungsi Create Data
     @FormUrlEncoded
     @POST("addStaff")
-    fun addStaff(@Field("name") name : String,
-                 @Field("hp") hp : String,
-                 @Field("alamat") alamat : String) : Call<ResultStatus>
+    fun addStaff(@Field("name")     name   : String,
+                 @Field("hp")       hp     : String,
+                 @Field("alamat")   alamat : String) : Call<ResultStatus>
 
 
 
